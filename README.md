@@ -74,7 +74,7 @@ drwxr-xr-x   3 lucky  staff    96B Jul 28 14:25 test
 ```
 kitchen list
 ```
-![header image](Screenshot 2021-07-28 at 4.21.23 PM.png)
+![header image](verify.png)
 
 ## 3. Create public-instance-2 
 ```
