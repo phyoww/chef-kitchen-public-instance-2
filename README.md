@@ -8,11 +8,13 @@
 
 # Installation Chef-workstation 
 ```bash
-#wget <https://packages.chef.io/files/stable/chef-workstation/21.2.278/ubuntu/20.04/chef-workstation_21.2.278-1_amd64.deb>
+wget <https://packages.chef.io/files/stable/chef-workstation/21.2.278/ubuntu/20.04/chef-workstation_21.2.278-1_amd64.deb>
 
-#sudo dpkg -i chef-workstation_21.2.278-1_amd64.deb
-
-#chef -v
+```
+sudo dpkg -i chef-workstation_21.2.278-1_amd64.deb
+```
+```chef -v
+```
 Chef Workstation version: 21.2.303
 Chef Infra Client version: 16.10.17
 Chef InSpec version: 4.26.13
@@ -24,7 +26,7 @@ Cookstyle version: 7.8.3
 ```
 
 
-# Generate checf cookbook 
+# Generate chef cookbook 
 ```bash
 chef generate cookbook public-instance-2
 ```
