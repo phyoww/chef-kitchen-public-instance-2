@@ -1,31 +1,40 @@
 ---
 driver:
-  name: vagrant
-
-## The forwarded_port port feature lets you connect to ports on the VM guest via
-## localhost on the host.
-## see also: https://www.vagrantup.com/docs/networking/forwarded_ports
-
-#  network:
-#    - ["forwarded_port", {guest: 80, host: 8080}]
-
+  name: ec2
+  aws_ssh_key_id: cloudideastar-master
+  region: ap-southeast-1
+  subnet_id: subnet-232c9a45
+  security_group_ids: sg-60aede2d
+  associate_public_ip: true
+  instance_type: t2.micro
+  tags:
+    Name: "public-instance-1"
 provisioner:
   name: chef_zero
-
-  ## product_name and product_version specifies a specific Chef product and version to install.
-  ## see the Chef documentation for more details: https://docs.chef.io/workstation/config_yml_kitchen/
-  #  product_name: chef
-  #  product_version: 16
-
+  product_name: chef
+  product_version: 14.12.3
+  chef_license: accept
 verifier:
   name: inspec
-
+  format: documentation
 platforms:
-  - name: ubuntu-20.04
-  - name: centos-8
-
+  - name: ubuntu-18.04
+    driver:
+      # image_id: ami-0b92b1b6d372ec0e7
+      block_device_mappings:
+        - device_name: /dev/sda1
+          ebs:
+            volume_type: gp2
+            # virtual_name: test
+            volume_size: 10
+            delete_on_termination: true
+    transport:
+      username: ubuntu # set username
+      ssh_key: /Users/lucky/mydev-boxes/python-dev-box/kitchen/cloudideastar-master.pem
 suites:
   - name: default
+    run_list:
+      - recipe[public-instance-1::default]
     verifier:
       inspec_tests:
         - test/integration/default
