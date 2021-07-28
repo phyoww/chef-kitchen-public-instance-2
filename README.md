@@ -40,7 +40,7 @@ drwxr-xr-x   3 lucky  staff    96B Jul  3 17:19 .kitchen
 drwxr-xr-x  15 lucky  staff   480B Jul 28 14:25 public-instance-2
 ```
 
-# Goto public-instance-2 folder 
+# Go to public-instance-2 folder 
 ```
 cd public-instance-2
 public-instance-2 git:(master) ls -lah
@@ -64,11 +64,6 @@ drwxr-xr-x   3 lucky  staff    96B Jul 28 14:25 test
 
 # Steps: 
 
-```
-sgpvpc - 192.168.0.0/16
-sydvpc - 172.16.0.0/16
-tkovpc - 10.10.0.0/16
-```
 
 ## 1. Create kitchen.yaml file & update security group ID on "kitchen.yml"
 - [kitchen.yml](./kitchen.yml)
