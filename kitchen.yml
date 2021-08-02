@@ -30,7 +30,7 @@ platforms:
             delete_on_termination: true
     transport:
       username: ubuntu # set username
-      ssh_key: /Users/lucky/mydev-boxes/python-dev-box/kitchen/cloudideastar-master.pem
+      ssh_key: /Users/lucky/mydev-boxes/python-dev-box/kitchen/xxxxxxxxxx-xxxxx.pem
 suites:
   - name: default
     run_list:
