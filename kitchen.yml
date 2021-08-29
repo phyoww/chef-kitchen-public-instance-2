@@ -1,7 +1,7 @@
 ---
 driver:
   name: ec2
-  aws_ssh_key_id: cloudideastar-master
+  aws_ssh_key_id: xxxxxxxxxx-xxxxx
   region: ap-southeast-1
   subnet_id: subnet-232c9a45
   security_group_ids: sg-60aede2d
