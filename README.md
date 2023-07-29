@@ -69,7 +69,7 @@ drwxr-xr-x   3 lucky  staff    96B Jul 28 14:25 test
 - [kitchen.yml](./kitchen.yml)
 
 
-## 2. Verity kitchen
+## 2. Verify kitchen
 
 ```
 kitchen list
@@ -83,7 +83,7 @@ kitchen create default-ubuntu-1804
 
 ![header image](instance.png)
 
-## 4. Verity kitchen cli and GUI
+## 4. Verify kitchen cli and GUI
 
 ![header image](EC2.png)
 
